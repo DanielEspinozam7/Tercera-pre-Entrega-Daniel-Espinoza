@@ -1,0 +1,32 @@
+{% extends "entidades/index.html"%}
+
+
+{% block titulo %}
+<h1 class="h3 mb-0 text-gray-800">Bienvenidos al Proyecto python</h1>   
+{% endblock titulo %}
+
+
+{% block contenido %}
+<h2>Productos</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Titulo</th>
+            <th>Descripcion</th>
+            <th>Especificaciones</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for e in productos %}
+        <tr>
+            <td>{{ e.id }}</td>
+            <td>{{ e.Titulo }}</td>
+            <td>{{ e.Descripicion }}</td>
+            <td>{{ e.Especificaciones }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}

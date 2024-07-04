@@ -1,0 +1,31 @@
+{% extends "entidades/index.html"%}
+
+
+{% block titulo %}
+<h1 class="h3 mb-0 text-gray-800">Bienvenidos al Proyecto python</h1>   
+{% endblock titulo %}
+
+
+{% block contenido %}
+<h2>Cotizaciones</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Razon Social o Nombre</th>
+            <th>Fecha</th>
+            <th>Detalle</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for e in cotizaciones %}
+        <tr>
+            <td>{{ e.id }}</td>
+            <td>{{ e.RazonSocial }}</td>
+            <td>{{ e.FechaCoti }}</td>
+            <td>{{ e.Detalle }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
